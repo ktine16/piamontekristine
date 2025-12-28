@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kristine Portfolio</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const moonBtn = document.querySelector(".floating-moon");
+    const moonImg = moonBtn.querySelector("img");
+  
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        moonImg.src = "sun_503351.png";
+    }
+  
+    moonBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+  
+        const isDark = document.body.classList.contains("dark-mode");
+        moonImg.src = isDark ? "sun_503351.png" : "solar--moon-broken.png";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  });
+  </script>
+  
+
+
+
+<body>
+
+  <nav class="navbar">
+    <!-- LOGO ON THE LEFT -->
+    <img src="mybb.png" alt="Logo" class="nav-logo">
+  
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#proj">Project</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+
+<!-- HOME -->
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <h1>MY WEBSITE PORTFOLIO</h1>
+    <p class="typing">HI, I'M KRISTINE, YOUR CARAT-IT GIRLY</p>
+  </div>
+  <div class="hero-image">
+    <img src="my_pic.jpg" alt="My Photo">
+  </div>
+</section>
+
+<!-- PROJECT -->
+
+<section id="proj" class="project">
+  <h2 class="project-title">PERSONAL WEBSITE</h2>
+
+  <img src="Screenshot 2025-12-27 173535.png" alt="picture" class="project-img">
+
+  <a href="https://piamonte1bwebsite.netlify.app/" class="project-link">https://piamonte1bwebsite.netlify.app/</a>
+
+  <p class="project-text">I made this website when I was in my first year of college. This is a project on the subject Living in the IT Era. The tools i used in this project are HTML and CSS. </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="skill-box">
+    <h3>PROGRAMMING LANGUAGES & FRAMEWORKS</h3>
+    <p>C LANGUAGE</p>
+    <p>HTML</p>
+    <p>PYTHON</p>
+    <p>CSS</p>
+    <p>JAVASCRIPT</p>
+  </div>
+  <div class="skill-box">
+    <h3>SOFT SKILLS</h3>
+    <p>COMMUNICATION</p>
+    <p>TEAMWORK</p>
+    <p>ADAPTABILITY</p>
+    <p>EMOTIONAL INTELLIGENCE</p>
+    <p>CRITICAL THINKING</p>
+    <p>LEADERSHIP</p>
+  </div>
+  <div class="skill-box">
+    <h3>TOOLS</h3>
+    <p>GIT</p>
+    <p>GITHUB</p>
+    <p>DOCKER</p>
+    <p>CANVA</p>
+    <p>VISUAL STUDIO</p>
+    <p>N8N AUTOMATION</p>
+    <p>VISUAL STUDIO CODE</p>
+  </div>
+  <div class="skill-box">
+    <h3>TECHNICAL AREAS</h3>
+    <p>WEB DEVELOPMENT</p>
+    <p>COMPUTER NETWORKING</p>
+  </div>
+  
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hero">
+  <div class="about-content">
+    <h1>ABOUT</h1>
+    <p>
+      Hi, I am Kristine Mae T. Piamonte.
+      I am a second-year IT student at EVSU.
+      I enjoy combining creativity with technology and continuously improving my abilities.
+    </p>
+
+    <div class="about-boxes">
+      <div class="about-box">
+        <h2>TECHNICAL INTEREST</h2>
+        <p>Basic Programming</p>
+        <p>Networking</p>
+        <p>Web Design</p>
+      </div>
+
+      <div class="about-box">
+        <h2>EDUCATION</h2>
+        <p>Tabing Elementary School</p>
+        <p>Tabango National High School</p>
+        <p>Eastern Visayas State University - Ormoc City Campus</p>
+      </div>
+
+      <div class="about-box">
+        <h2>HOBBIES</h2>
+        <p>Singing</p>
+        <p>Dancing</p>
+        <p>Reading</p>
+        <p>Supporting SEVENTEEN</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-card">
+
+    <div class="contact-info">
+      <p><strong>Contact</strong></p>
+      <p>kristinemaet.piamonte@gmail.com</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sagimangga"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/ktine16"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <label>Full Name</label>
+        <input type="text">
+
+        <label>Email</label>
+        <input type="email">
+
+        <label>Message</label>
+        <textarea rows="3"></textarea>
+
+        <button>Send</button>
+      </form>
+    </div>
+    
+  </div>
+</section>
+
+<button class="floating-moon">
+  <img src="solar--moon-broken.png" class="moon">
+</button>
+
+</body>
+</html>
